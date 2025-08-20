@@ -1,0 +1,265 @@
+/* Restaurant Chatbot Styles - Override for restaurant website */
+
+/* Chatbot Container for Restaurant */
+.chatbot-container {
+    position: fixed !important;
+    bottom: 100px !important;
+    right: 30px !important;
+    width: 350px !important;
+    height: 500px !important;
+    background: white !important;
+    border-radius: 15px !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    z-index: 1001 !important;
+    overflow: hidden !important;
+    border: none !important;
+    backdrop-filter: none !important;
+    animation: none !important;
+    transform: none !important;
+}
+
+/* Chatbot Header */
+.chatbot-header {
+    background: #e74c3c !important;
+    color: white !important;
+    padding: 1rem !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    border-radius: 15px 15px 0 0 !important;
+}
+
+.chatbot-title {
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+}
+
+/* Close Button */
+.close-chatbot {
+    background: none !important;
+    border: none !important;
+    color: white !important;
+    font-size: 1.5rem !important;
+    cursor: pointer !important;
+    margin-left: auto !important;
+    padding: 0 !important;
+    width: 30px !important;
+    height: 30px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    transition: background 0.3s ease !important;
+}
+
+.close-chatbot:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Chat Display */
+.chat-display {
+    flex: 1 !important;
+    padding: 1rem !important;
+    overflow-y: auto !important;
+    background: #f8f9fa !important;
+    max-height: 350px !important;
+}
+
+/* Message Styles */
+.msg-row {
+    display: flex !important;
+    align-items: flex-start !important;
+    margin-bottom: 1rem !important;
+    gap: 0.5rem !important;
+}
+
+.msg-row.user {
+    flex-direction: row-reverse !important;
+}
+
+.msg-icon {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+}
+
+.msg-icon.user {
+    background: #e74c3c !important;
+}
+
+.msg-icon.bot {
+    background: #3498db !important;
+}
+
+.message {
+    max-width: 70% !important;
+    padding: 0.75rem 1rem !important;
+    border-radius: 18px !important;
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+    word-wrap: break-word !important;
+}
+
+.message.user {
+    background: #e74c3c !important;
+    color: white !important;
+    border-bottom-right-radius: 4px !important;
+}
+
+.message.bot {
+    background: white !important;
+    color: #333 !important;
+    border: 1px solid #e1e5e9 !important;
+    border-bottom-left-radius: 4px !important;
+}
+
+/* Input Area */
+.input-area {
+    padding: 1rem !important;
+    background: white !important;
+    border-top: 1px solid #e1e5e9 !important;
+    display: flex !important;
+    gap: 0.5rem !important;
+    align-items: center !important;
+}
+
+#user-input {
+    flex: 1 !important;
+    padding: 0.75rem 1rem !important;
+    border: 1px solid #e1e5e9 !important;
+    border-radius: 25px !important;
+    font-size: 0.9rem !important;
+    outline: none !important;
+    transition: border-color 0.3s ease !important;
+}
+
+#user-input:focus {
+    border-color: #e74c3c !important;
+}
+
+#send-btn {
+    background: #e74c3c !important;
+    color: white !important;
+    border: none !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+#send-btn:hover {
+    background: #c0392b !important;
+    transform: scale(1.05) !important;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+    display: flex !important;
+    gap: 4px !important;
+    padding: 0.5rem !important;
+}
+
+.typing-dot {
+    width: 8px !important;
+    height: 8px !important;
+    background: #bdc3c7 !important;
+    border-radius: 50% !important;
+    animation: typing 1.4s infinite ease-in-out !important;
+}
+
+.typing-dot:nth-child(1) { animation-delay: -0.32s !important; }
+.typing-dot:nth-child(2) { animation-delay: -0.16s !important; }
+
+@keyframes typing {
+    0%, 80%, 100% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Quick Replies */
+.quick-replies {
+    padding: 10px !important;
+    border-top: 1px solid #eee !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 5px !important;
+    background: #f8f9fa !important;
+}
+
+.quick-replies button {
+    background: #f0f0f0 !important;
+    border: none !important;
+    padding: 5px 10px !important;
+    border-radius: 15px !important;
+    font-size: 12px !important;
+    cursor: pointer !important;
+    transition: background 0.3s ease !important;
+    color: #333 !important;
+}
+
+.quick-replies button:hover {
+    background: #e74c3c !important;
+    color: white !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chatbot-container {
+        width: 90vw !important;
+        height: 70vh !important;
+        right: 5vw !important;
+        bottom: 80px !important;
+    }
+    
+    .message {
+        max-width: 85% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .chatbot-container {
+        width: 95vw !important;
+        height: 60vh !important;
+        right: 2.5vw !important;
+        bottom: 70px !important;
+    }
+    
+    .chat-display {
+        max-height: 250px !important;
+    }
+}
+
+/* Hide original chatbot styles when used in restaurant */
+body:not(.chatbot-page) .chatbot-container {
+    position: fixed !important;
+    bottom: 100px !important;
+    right: 30px !important;
+    width: 350px !important;
+    height: 500px !important;
+    background: white !important;
+    border-radius: 15px !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    z-index: 1001 !important;
+    overflow: hidden !important;
+    border: none !important;
+    backdrop-filter: none !important;
+    animation: none !important;
+    transform: none !important;
+}
